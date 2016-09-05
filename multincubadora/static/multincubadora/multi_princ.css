@@ -1,0 +1,50 @@
+@import url("navigation.css");
+
+body{
+	background: url(background1.gif);
+	padding-left: 10px;
+	color: black;
+}
+
+div.center {
+	width: 800px;
+	height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -400px;
+}
+
+div.menu_org{
+	border:1px solid #ccc;
+	width: 185px;
+	background-color:rgba(255, 255, 255, 0.8);
+}
+div.menu_org img{
+	width: 180px;
+    height: 80px;
+}
+
+div.princ{
+	
+	margin: 30px;
+	height: 472px;
+	float: left;	
+}
+
+div.princ img{
+	width: 67px;
+	height: 472px;
+}
+
+div.sec{
+	margin:150px;
+	
+	height: 320px;
+}
+
+div.sec img{
+	width: 120px;
+	height: 120px
+}

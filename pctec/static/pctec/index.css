@@ -1,0 +1,23 @@
+body{
+	background: url(background1.gif);
+	padding-left: 10px;
+
+}
+
+div.center {
+    margin: auto;
+    width: 60%;
+    padding: 80px;
+}
+
+div.img {
+    margin-left: 10%;
+    margin-top: 20%;
+    float: left;
+}
+
+div.img img {
+    width: 250px;
+    height: 150px;
+    background-color:rgba(255, 255, 255, 0.4);
+}

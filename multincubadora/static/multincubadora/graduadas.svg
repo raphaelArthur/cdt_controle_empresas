@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg3336"
+   version="1.1"
+   inkscape:version="0.91 r"
+   width="590"
+   height="78.75"
+   viewBox="0 0 590 78.75"
+   sodipodi:docname="graduadas.svg">
+  <metadata
+     id="metadata3342">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3340">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3348">
+      <stop
+         style="stop-color:#ff6600;stop-opacity:1;"
+         offset="0"
+         id="stop3350" />
+      <stop
+         style="stop-color:#ff6600;stop-opacity:0;"
+         offset="1"
+         id="stop3352" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3348"
+       id="linearGradient3354"
+       x1="0.51618546"
+       y1="0.28980753"
+       x2="588.96765"
+       y2="77.201447"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.51618381,-0.45145433)" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1309"
+     inkscape:window-height="747"
+     id="namedview3338"
+     showgrid="false"
+     inkscape:zoom="1.9372881"
+     inkscape:cx="216.7979"
+     inkscape:cy="39.375"
+     inkscape:window-x="57"
+     inkscape:window-y="21"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3336" />
+  <rect
+     style="fill:url(#linearGradient3354);fill-opacity:1;stroke:none;stroke-opacity:1"
+     id="rect3346"
+     width="592.06476"
+     height="80.524933"
+     x="-1.0323639"
+     y="-1.1940155" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:53.30411148px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="160.66208"
+     y="55.18589"
+     id="text3356"
+     sodipodi:linespacing="125%"
+     transform="scale(0.9749561,1.0256872)"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><tspan
+       sodipodi:role="line"
+       id="tspan3358"
+       x="160.66208"
+       y="55.18589">Graduadas</tspan></text>
+</svg>

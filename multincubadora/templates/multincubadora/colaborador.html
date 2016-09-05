@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<html>
+<head>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'pctec/colaborador.css' %}" />
+</head>
+<body>
+	<h1>{{colaborador.nome}}</h1>
+	<br>
+	<div class="foto">
+		<img src="{{colaborador.foto.url}}" alt="Person">
+	</div>
+	<div class="principal">
+		<table>
+			<tbody>
+				<tr>
+					<td>Nome: {{colaborador.nome}}</td>
+				</tr>
+				<tr>
+					<td>CPF: {{colaborador.cpf}}</td>
+					<td>RG: {{colaborador.rg}} {{colaborador.expeditor}}</td>
+				</tr>
+				<tr>
+					<td>Endereço: {{colaborador.endereco}}</td>
+				</tr>
+				<tr>
+					<td>Email: {{colaborador.email}}</td>
+					<td>Telefone: {{colaborador.tel1}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>

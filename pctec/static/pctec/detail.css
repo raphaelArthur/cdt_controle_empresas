@@ -1,0 +1,246 @@
+@import url("navigation.css");
+
+body{
+	background: url(white_gradient.svg);
+	padding-left: 10px;
+	color: black;
+	font-family: 'Patua One', cursive;
+}
+
+div.menu_org{
+	border:1px solid #ccc;
+	width: 185px;
+	background-color:rgba(255, 255, 255, 0.8);
+}
+
+div.menu_org img{
+	width: 180px;
+    height: 80px;
+}
+
+@import "compass/css3";
+
+@import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
+
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+
+table {
+  border-collapse: separate;
+  background:#fff;
+  @include border-radius(5px);
+  margin:20px auto;
+  @include box-shadow(0px 0px 5px rgba(0,0,0,0.3));
+}
+
+thead {
+  @include border-radius(5px);
+}
+
+thead th {
+  font-family: 'Patua One', cursive;
+  font-size:16px;
+  font-weight:400;
+  color:#fff;
+  @include text-shadow(1px 1px 0px rgba(0,0,0,0.5));
+  text-align:left;
+  padding:20px;
+  @include background-image(linear-gradient(#646f7f, #4a5564));
+  border-top:1px solid #858d99;
+  
+  &:first-child {
+   @include border-top-left-radius(5px); 
+  }
+
+  &:last-child {
+    @include border-top-right-radius(5px); 
+  }
+}
+
+tbody tr td {
+  font-family: 'Open Sans', sans-serif;
+  font-weight:400;
+  color:#5f6062;
+  font-size:13px;
+  padding:20px 20px 20px 20px;
+  border-bottom:1px solid #e0e0e0;
+  
+}
+
+tbody tr:nth-child(2n) {
+  background:#f0f3f5;
+}
+
+tbody tr:last-child td {
+  border-bottom:none;
+  &:first-child {
+    @include border-bottom-left-radius(5px);
+  }
+  &:last-child {
+    @include border-bottom-right-radius(5px);
+  }
+}
+
+tbody:hover > tr td {
+  @include opacity(0.5);
+  
+  /* uncomment for blur effect */
+  /* color:transparent;
+  @include text-shadow(0px 0px 2px rgba(0,0,0,0.8));*/
+}
+
+tbody:hover > tr:hover td {
+  @include text-shadow(none);
+  color:#2d2d2d;
+  @include opacity(1.0);
+}
+
+
+div.center {
+    margin: auto;
+    width: 70%;
+    padding: 50px;
+    padding-left: 120px;
+}
+
+div.logo{
+	margin: 5px;
+    float: left;
+    width: 152px;
+}
+
+div.logo img {
+    width: 300px;
+    height: 250px;
+}
+
+div.principal{
+	position: absolute;
+	top:275px;
+	left:550px;
+}
+
+div.principal table{
+	width: 500px;
+}
+
+div.contato{
+	margin-left:10px;
+	position: absolute;
+	top:350px;
+}
+
+div.contato table{
+	width: 500px;
+}
+
+div.contato img{
+	width: 100px;
+    height: 120px;
+}
+
+div.desc{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+	position: absolute;
+	right: 10px;
+	top: 75px;
+	width:72%;
+	height: 250px;
+	text-align: justify;
+	color: black;
+}
+
+div.foto {
+    margin: 5px;
+    float: left;
+    width: 152px;
+    text-align: center;
+}
+
+div.foto img {
+    width: 100px;
+    height: 120px;
+}
+
+div.colaborador{
+	position: absolute;
+  width: 100%;
+	top:800px;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4CAF50;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left:120px;
+    top: 0px;
+    z-index: +1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content p {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content p:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.button{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+

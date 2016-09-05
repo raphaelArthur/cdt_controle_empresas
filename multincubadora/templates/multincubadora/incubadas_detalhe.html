@@ -1,0 +1,162 @@
+{% load staticfiles %}
+<html>
+<head>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'multincubadora/incubadas_detalhe.css' %}" />
+</head>
+<body>
+	<ul class="topnav" id="myTopnav">
+		<li><a href="/cdt/">Home</a></li>
+		<li><a href="/cdt/multincubadora/">Multincubadora</a></li>
+		<li><a href="/cdt/pctec/">Parque Tecnológico</a></li>
+		<li><a href="#about">Contato</a></li>
+		<li class="icon">
+			<a href="javascript:void(0);" onclick="navigationBar()">&#9776;</a>
+		</li>
+	</ul>
+	<br>
+	<div class="logo">
+		<img src="{{incubada.logo.url}}" alt="logo" border:0;">
+	</div>
+	<div class="desc">
+		<p>{{incubada.descricao}}</p>
+	</div>
+
+	<div class="redes_sociais">
+		{%if incubada.facebook != "" %}
+		    <div class="logos_redes_sociais">
+		    	<a href="{{incubada.facebook}}" target="_blank">
+		    		<img src="{% static "multincubadora/facebook.jpg" %}" alt="logo_facebook" border:0;">
+		    	</a>
+		    </div>
+		{% else %}
+			<div class="logos_redes_sociais_gray">
+		    	<img src="{% static "multincubadora/facebook.jpg" %}" alt="logo_facebook" border:0;">
+		    </div>
+		{%endif%}
+		{%if incubada.site != "" %}
+		    <div class="logos_redes_sociais">
+		    	<a href="{{incubada.site}}" target="_blank">
+		    		<img src="{% static "multincubadora/www.jpg" %}" alt="logo_facebook" border:0;">
+		    	</a>
+		    </div>
+		{% else %}
+			<div class="logos_redes_sociais_gray">
+		    	<img src="{% static "multincubadora/www.jpg" %}" alt="logo_facebook" border:0;">
+		    </div>
+		{%endif%}
+		{%if incubada.linkedin != "" %}
+		    <div class="logos_redes_sociais">
+		    	<a href="{{incubada.linkedin}}" target="_blank">
+		    		<img src="{% static "multincubadora/linkedin.png" %}" alt="logo_facebook" border:0;">
+		    	</a>
+		    </div>
+		{% else %}
+			<div class="logos_redes_sociais_gray">
+		    	<img src="{% static "multincubadora/linkedin.png" %}" alt="logo_facebook" border:0;">
+		    </div>
+		{%endif%}
+		{%if incubada.blog != "" %}
+		    <div class="logos_redes_sociais">
+		    	<a href="{{incubada.blog}}" target="_blank">
+		    		<img src="{% static "multincubadora/blog.png" %}" alt="logo_facebook" border:0;">
+		    	</a>
+		    </div>
+		{% else %}
+			<div class="logos_redes_sociais_gray">
+		    	<img src="{% static "multincubadora/blog.png" %}" alt="logo_facebook" border:0;">
+		    </div>
+		{%endif%}
+		{%if incubada.twitter != "" %}
+		    <div class="logos_redes_sociais">
+		    	<a href="{{incubada.twitter}}" target="_blank">
+		    		<img src="{% static "multincubadora/twitter.png" %}" alt="logo_facebook" border:0;">
+		    	</a>
+		    </div>
+		{% else %}
+			<div class="logos_redes_sociais_gray">
+		    	<img src="{% static "multincubadora/twitter.png" %}" alt="logo_facebook" border:0;">
+		    </div>
+		{%endif%}
+	</div>
+	<div class="center">
+		<div class="principal">
+			<table>
+				<tbody>
+					<tr>
+						<td>Nome: {{incubada.nome}}</td>
+						<td>Cnpj: {{incubada.cnpj}}</td>
+					</tr>
+					<tr>
+						<td>Sócio: {{incubada.socio}}</td>
+						<td>Responsável Financeiro: {{incubada.responsavel_financeiro}}</td>
+					</tr>
+					<tr>
+						<td>Email: {{incubada.email}}</td>
+						<td>Sala: {{incubada.sala}}</td>
+					</tr>
+					<tr>
+						<td>Telefone: {{incubada.tel1}}</td>
+						<td>Telefone 2: </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="colaborador">
+		<h1> Colaboradores: </h1>
+		{% for colaborador in lista_colaboradores %}
+			<div class="foto">
+				<a href="{{ colaborador.id }}/" target="_blank">
+		    		<img src="{{colaborador.foto.url}}" alt="Person">
+		    	</a>
+		    	<div class="dropdown">
+			    	<button class="dropbtn">{{colaborador.nome}} {{colaborador.sobrenome}}</button>
+  					<div class="dropdown-content">
+						<p>CPF: {{colaborador.cpf}}</p>
+						<p>RG: {{colaborador.rg}} {{colaborador.expeditor}}</p>
+						<p>Endereço: {{colaborador.endereco}}</p>
+						<p>Email: {{colaborador.email}}</p>
+						<p>Telefone: {{colaborador.tel1}}</p>
+						<a href="/cdt/multincubadora/cracha/{{colaborador.id}}" target="_blank">Gerar Crachá</a>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</body>
+
+<script type="text/javascript">
+	/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.ondblclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function navigationBar() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>

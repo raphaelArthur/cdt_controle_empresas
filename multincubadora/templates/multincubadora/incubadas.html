@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'multincubadora/incubadas.css' %}" />
+	</head>
+	<body>
+		<ul class="topnav" id="myTopnav">
+			<li><a href="/cdt/">Home</a></li>
+			<li><a href="/cdt/multincubadora/">Multincubadora</a></li>
+			<li><a href="/cdt/pctec/">Parque Tecnológico</a></li>
+			<li><a href="#about">Contato</a></li>
+			<li class="icon">
+				<a href="javascript:void(0);" onclick="navigationBar()">&#9776;</a>
+			</li>
+		</ul>
+		<div class="center">
+		{% if lista_empresas_incubadas %}
+		    {% for empresa in lista_empresas_incubadas %}
+			    <div class="img">
+			    	<a href="{{ empresa.id }}/" target="_self">
+			    		<img src="{{empresa.logo.url}}" alt="logo2" border:0;">
+			    	</a>
+			    	<div class = "desc">{{ empresa.nome }}</div>
+			    </div>
+		    {% endfor %}
+		{% else %}
+		    <p>Não há Empresas Cadastradas</p>
+		{% endif %}
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		function navigationBar() {
+		    var x = document.getElementById("myTopnav");
+		    if (x.className === "topnav") {
+		        x.className += " responsive";
+		    } else {
+		        x.className = "topnav";
+		}
+}
+	</script>
+</html>

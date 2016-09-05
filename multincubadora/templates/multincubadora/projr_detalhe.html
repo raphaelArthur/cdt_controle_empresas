@@ -1,0 +1,153 @@
+{% load staticfiles %}
+<html>
+<head>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'pctec/detail.css' %}" />
+
+</head>
+<body>
+	<ul class="topnav" id="myTopnav">
+		<li><a href="/cdt/">Home</a></li>
+		<li><a href="/cdt/multincubadora/">Multincubadora</a></li>
+		<li><a href="/cdt/pctec/">Parque Tecnológico</a></li>
+		<li><a href="#about">Contato</a></li>
+		<li class="icon">
+			<a href="javascript:void(0);" onclick="navigationBar()">&#9776;</a>
+		</li>
+	</ul>
+	<br>
+	<div class="logo">
+		<img src="{{empresa.logo.url}}" alt="logo" border:0;">
+	</div>
+	<div class="desc">
+		<p>{{empresa.descricao}}</p>
+	</div>
+	<div class="contato">
+		<h1>Presidente:</h1>
+		{% for colaborador in lista_colaboradores %}
+			<div class="w3-content" style="max-width:400px">
+				<div class="">
+				{% if colaborador.presidente %}
+					<a href="{{ colaborador.id }}/" target="_blank">
+		    			<img src="{{colaborador.foto.url}}" alt="Person">
+		    		</a>
+					<table>
+						<tbody>
+							<tr>
+								<td>Nome: {{colaborador.nome}}</td>
+							</tr>
+							<tr>
+								<td>Email: {{colaborador.email}}</td>
+							</tr>
+							<tr>
+								<td>Telefone: {{colaborador.tel1}}</td>
+							</tr>
+						</tbody>
+					</table>
+				{% endif %}
+				</div>
+		{% endfor %}
+			<a class="w3-btn-floating" style="position:absolute;top:45%;left:-17" onclick="plusDivs(-1)">❮</a>
+			<a class="w3-btn-floating" style="position:absolute;top:45%;right:-120" onclick="plusDivs(1)">❯</a>
+			</div>
+	</div>
+	<div class="principal">
+		<h1>Informações:</h1>
+		<table>
+			<tbody>
+				<tr>
+					<td>Nome: {{empresa.nome}}</td>
+				</tr>
+				<tr>
+					<td>Curso: {{empresa.curso}}</td>
+				</tr>
+				<tr>
+					<td>Email: {{empresa.email}}</td>
+				</tr>
+				<tr>
+					<td>Telefone: {{empresa.tel1}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="colaborador">
+		<h1> Colaboradores: </h1>
+		{% for colaborador in lista_colaboradores %}
+			<div class="foto">
+				<a href="{{ colaborador.id }}/" target="_blank">
+		    		<img src="{{colaborador.foto.url}}" alt="Person">
+		    	</a>
+		    	<div class="dropdown">
+			    	<button class="dropbtn">{{colaborador.nome}}</button>
+  					<div class="dropdown-content">
+ 						<p>Data de Nascimento : {{colaborador.data_nascimento}}</p>
+ 						<p>CPF: {{colaborador.cpf}}</p>
+ 						<p>RG: {{colaborador.rg}}</p>
+ 						<p>Email: {{colaborador.email}}</p>
+ 						<p>Telefone: {{colaborador.tel1}}</p>
+ 						<p>Endereço: {{colaborador.endereco}}</p>				
+						<p>Telefone: {{colaborador.tel1}}</p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</body>
+
+<script type="text/javascript">
+	/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.ondblclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+
+function navigationBar() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+</body>
+</html>

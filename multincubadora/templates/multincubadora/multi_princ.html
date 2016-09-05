@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<html>
+
+<head>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'multincubadora/multi_princ.css' %}" />
+</head>
+<body>
+	<ul class="topnav" id="myTopnav">
+		<li><a href="/cdt/">Home</a></li>
+		<li><a href="/cdt/multincubadora/">Multincubadora</a></li>
+		<li><a href="/cdt/pctec/">Parque Tecnológico</a></li>
+		<li><a href="#about">Contato</a></li>
+		<li class="icon">
+			<a href="javascript:void(0);" onclick="navigationBar()">&#9776;</a>
+		</li>
+	</ul>
+		<img src="{% static "pctec/logo_multincubadora.png" %}" alt="atendimento" border:0;">
+	
+	<div class="center">
+		<div class="princ">
+			<a href="/cdt/multincubadora/projr/" target="_self">
+				<img src="{% static "multincubadora/emJunior_1.png" %}" alt="atendimento" border:0;">
+			</a>
+		</div>
+		<div class="princ">
+			<a href="/cdt/multincubadora/graduadas/" target="_self">
+				<img src="{% static "multincubadora/graduadas_1.png" %}" alt="atendimento" border:0;">
+			</a>
+		</div>
+		<div class="princ">
+			<a href="/cdt/multincubadora/incubadas/" target="_self">
+				<img src="{% static "multincubadora/incubadas_1.png" %}" alt="atendimento" border:0;">
+			</a>
+		</div>
+		<div class="sec">
+			<img src="{% static "multincubadora/atendimentos.png" %}" alt="atendimento" border:0;">
+			<a href="/cdt/multincubadora/consultores/" target="_self">
+				<img src="{% static "multincubadora/consultores.png" %}" alt="atendimento" border:0;">
+			</a>
+			<img src="{% static "multincubadora/prof_labs.png" %}" alt="atendimento" border:0;">
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+function navigationBar() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+</html>
+

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+{% load staticfiles %}
+<html>
+	<head>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'multincubadora/cracha.css' %}" />
+		</head>
+	<body>
+		<page size="A4">
+		<div class="cabecalho">
+			<table>
+				<tr>
+					<th colspan="2">
+						<div class="icon_left">
+							<img src="{% static "multincubadora/cdt.png" %}" alt="atendimento" border:0;">
+						</div>
+							Confecção de Crachás
+						<div class="icon_right">
+							<img src="{% static "multincubadora/unb.png" %}" alt="atendimento" border:0;">
+						</div>
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div class="identificacao">
+			<table>
+				<tr><th colspan="2">Identificação</th></tr>
+			</table>
+		</div>
+		<div class="campo">
+			<table>
+				<tr><th colspan="2">NOME</th></tr>
+			</table>
+		</div>
+		<div class="resposta">
+			<table>
+				<tr>
+					<th colspan="2">{{colaborador.nome}} {{colaborador.sobrenome}}</th>
+				</tr>
+			</table>
+		</div>
+		<div class="campo">
+			<table>
+				<tr>
+					<th>EMPRESA</th>
+					<th>DATA DE INÍCIO</th>
+				</tr>
+			</table>
+		</div>
+		<div class="resposta">
+			<table>
+				<tr>
+					<th>{{colaborador.empresa}}</th>
+					<th>{{colaborador.data_entrada}}</th>
+				</tr>
+			</table>
+		</div>
+		<div class="campo">
+			<table>
+				<tr>
+					<th>CPF</th>
+					<th>E-mail</th>
+				</tr>
+			</table>
+		</div> 
+		<div class="resposta">
+			<table>
+				<tr>
+					<th>{{colaborador.cpf}}</th>
+					<th>{{colaborador.email}}</th>
+				</tr>
+			</table>
+		</div>
+		<div class="campo">
+			<table>
+				<tr><th colspan="2">Nome para Crachá</th></tr>
+			</table>
+		</div>
+		<div class="resposta">
+			<table>
+				<tr>
+					<th colspan="2">{{colaborador.nome}}</th>
+				</tr>
+			</table>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="box">
+			<table>
+				<tr>
+					<th>Área</th>
+					<th>Entrada</th>
+					<th>Saída</th>
+				</tr>
+				<tr>
+					<th>{{colaborador.instituicao}}</th>
+					<th>bla</th>
+					<th>bla</th>
+				</tr>
+			</table>
+		</div>
+		</page>
+		<div id="footerContent">
+            {%block page_foot%}
+                Page <pdf:pagenumber>
+            {%endblock%}
+        </div>
+	</body>
+</html>

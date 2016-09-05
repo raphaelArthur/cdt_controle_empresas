@@ -1,0 +1,87 @@
+@import url("navigation.css");
+
+body{
+	background: url(background1.gif);
+	padding-left: 10px;
+}
+
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   /* You can set flex-wrap and flex-direction individually */
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   /* Or do it all in one line with flex flow */
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: flex-end;
+   align-content: flex-end;
+}
+
+div.center {
+    margin: auto;
+    width: 100%;
+    padding:30px;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color:#FFF;
+}
+
+div.box{
+    padding:5px;
+    padding-left: 30px;
+}
+
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
